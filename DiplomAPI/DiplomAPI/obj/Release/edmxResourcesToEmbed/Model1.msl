@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище P_Lebedeva_DiplomModelContainer" CdmEntityContainer="Entities">
+    <EntitySetMapping Name="Activities">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Activities">
+        <MappingFragment StoreEntitySet="Activities">
+          <ScalarProperty Name="Coefficient" ColumnName="Coefficient" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DailyRation">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.DailyRation">
+        <MappingFragment StoreEntitySet="DailyRation">
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="RecepeId" ColumnName="RecepeId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="DailyRationId" ColumnName="DailyRationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Diets">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Diets">
+        <MappingFragment StoreEntitySet="Diets">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="DietId" ColumnName="DietId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Difficulties">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Difficulties">
+        <MappingFragment StoreEntitySet="Difficulties">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="DifficultiesId" ColumnName="DifficultiesId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Genders">
+        <MappingFragment StoreEntitySet="Genders">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Goals">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Goals">
+        <MappingFragment StoreEntitySet="Goals">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="GoalId" ColumnName="GoalId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IngredientForRecipe">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.IngredientForRecipe">
+        <MappingFragment StoreEntitySet="IngredientForRecipe">
+          <ScalarProperty Name="UnitsOfMeasurementId" ColumnName="UnitsOfMeasurementId" />
+          <ScalarProperty Name="RecipeId" ColumnName="RecipeId" />
+          <ScalarProperty Name="IngredientId" ColumnName="IngredientId" />
+          <ScalarProperty Name="IngredientForRecipeId" ColumnName="IngredientForRecipeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Ingredients">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Ingredients">
+        <MappingFragment StoreEntitySet="Ingredients">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="IngredientId" ColumnName="IngredientId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kitchens">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Kitchens">
+        <MappingFragment StoreEntitySet="Kitchens">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="KitchenId" ColumnName="KitchenId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meals">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Meals">
+        <MappingFragment StoreEntitySet="Meals">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="MealId" ColumnName="MealId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Preparations">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Preparations">
+        <MappingFragment StoreEntitySet="Preparations">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="PreparationId" ColumnName="PreparationId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Recipes">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Recipes">
+        <MappingFragment StoreEntitySet="Recipes">
+          <ScalarProperty Name="KitchenId" ColumnName="KitchenId" />
+          <ScalarProperty Name="CookingId" ColumnName="CookingId" />
+          <ScalarProperty Name="DifficultyId" ColumnName="DifficultyId" />
+          <ScalarProperty Name="SpecificsId" ColumnName="SpecificsId" />
+          <ScalarProperty Name="DietId" ColumnName="DietId" />
+          <ScalarProperty Name="RecipeType" ColumnName="RecipeType" />
+          <ScalarProperty Name="MealId" ColumnName="MealId" />
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="MinutesOfCooking" ColumnName="MinutesOfCooking" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="RecipeId" ColumnName="RecipeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RecipeTypes">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.RecipeTypes">
+        <MappingFragment StoreEntitySet="RecipeTypes">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="RecipeTypeId" ColumnName="RecipeTypeId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Specifics">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Specifics">
+        <MappingFragment StoreEntitySet="Specifics">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="SpecificityId" ColumnName="SpecificityId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Steps">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Steps">
+        <MappingFragment StoreEntitySet="Steps">
+          <ScalarProperty Name="Photo" ColumnName="Photo" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="StepNomen" ColumnName="StepNomen" />
+          <ScalarProperty Name="RecipeId" ColumnName="RecipeId" />
+          <ScalarProperty Name="StepId" ColumnName="StepId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UnitsOfMeasurement">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.UnitsOfMeasurement">
+        <MappingFragment StoreEntitySet="UnitsOfMeasurement">
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="UnitsOfMeasurementId" ColumnName="UnitsOfMeasurementId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="Carbohydrates" ColumnName="Carbohydrates" />
+          <ScalarProperty Name="Fats" ColumnName="Fats" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+          <ScalarProperty Name="Squirrels" ColumnName="Squirrels" />
+          <ScalarProperty Name="Calories" ColumnName="Calories" />
+          <ScalarProperty Name="GoalId" ColumnName="GoalId" />
+          <ScalarProperty Name="ActivityId" ColumnName="ActivityId" />
+          <ScalarProperty Name="Height" ColumnName="Height" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="GenderId" ColumnName="GenderId" />
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

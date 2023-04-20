@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="P_Lebedeva_DiplomModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Activities" EntityType="P_Lebedeva_DiplomModel.Activities" />
+    <EntitySet Name="DailyRation" EntityType="P_Lebedeva_DiplomModel.DailyRation" />
+    <EntitySet Name="Diets" EntityType="P_Lebedeva_DiplomModel.Diets" />
+    <EntitySet Name="Difficulties" EntityType="P_Lebedeva_DiplomModel.Difficulties" />
+    <EntitySet Name="Genders" EntityType="P_Lebedeva_DiplomModel.Genders" />
+    <EntitySet Name="Goals" EntityType="P_Lebedeva_DiplomModel.Goals" />
+    <EntitySet Name="IngredientForRecipe" EntityType="P_Lebedeva_DiplomModel.IngredientForRecipe" />
+    <EntitySet Name="Ingredients" EntityType="P_Lebedeva_DiplomModel.Ingredients" />
+    <EntitySet Name="Kitchens" EntityType="P_Lebedeva_DiplomModel.Kitchens" />
+    <EntitySet Name="Meals" EntityType="P_Lebedeva_DiplomModel.Meals" />
+    <EntitySet Name="Preparations" EntityType="P_Lebedeva_DiplomModel.Preparations" />
+    <EntitySet Name="Recipes" EntityType="P_Lebedeva_DiplomModel.Recipes" />
+    <EntitySet Name="RecipeTypes" EntityType="P_Lebedeva_DiplomModel.RecipeTypes" />
+    <EntitySet Name="Specifics" EntityType="P_Lebedeva_DiplomModel.Specifics" />
+    <EntitySet Name="Steps" EntityType="P_Lebedeva_DiplomModel.Steps" />
+    <EntitySet Name="sysdiagrams" EntityType="P_Lebedeva_DiplomModel.sysdiagrams" />
+    <EntitySet Name="UnitsOfMeasurement" EntityType="P_Lebedeva_DiplomModel.UnitsOfMeasurement" />
+    <EntitySet Name="Users" EntityType="P_Lebedeva_DiplomModel.Users" />
+    <AssociationSet Name="FK_Users_Activities" Association="P_Lebedeva_DiplomModel.FK_Users_Activities">
+      <End Role="Activities" EntitySet="Activities" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DailyRation_Recipes" Association="P_Lebedeva_DiplomModel.FK_DailyRation_Recipes">
+      <End Role="Recipes" EntitySet="Recipes" />
+      <End Role="DailyRation" EntitySet="DailyRation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DailyRation_Users" Association="P_Lebedeva_DiplomModel.FK_DailyRation_Users">
+      <End Role="Users" EntitySet="Users" />
+      <End Role="DailyRation" EntitySet="DailyRation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recipes_Diets" Association="P_Lebedeva_DiplomModel.FK_Recipes_Diets">
+      <End Role="Diets" EntitySet="Diets" />
+      <End Role="Recipes" EntitySet="Recipes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recipes_Difficulties" Association="P_Lebedeva_DiplomModel.FK_Recipes_Difficulties">
+      <End Role="Difficulties" EntitySet="Difficulties" />
+      <End Role="Recipes" EntitySet="Recipes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Users" Association="P_Lebedeva_DiplomModel.FK_Users_Users">
+      <End Role="Genders" EntitySet="Genders" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Goals" Association="P_Lebedeva_DiplomModel.FK_Users_Goals">
+      <End Role="Goals" EntitySet="Goals" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IngredientForRecipe_Ingredients" Association="P_Lebedeva_DiplomModel.FK_IngredientForRecipe_Ingredients">
+      <End Role="Ingredients" EntitySet="Ingredients" />
+      <End Role="IngredientForRecipe" EntitySet="IngredientForRecipe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IngredientForRecipe_Recipes" Association="P_Lebedeva_DiplomModel.FK_IngredientForRecipe_Recipes">
+      <End Role="Recipes" EntitySet="Recipes" />
+      <End Role="IngredientForRecipe" EntitySet="IngredientForRecipe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IngredientForRecipe_UnitsOfMeasurement" Association="P_Lebedeva_DiplomModel.FK_IngredientForRecipe_UnitsOfMeasurement">
+      <End Role="UnitsOfMeasurement" EntitySet="UnitsOfMeasurement" />
+      <End Role="IngredientForRecipe" EntitySet="IngredientForRecipe" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recipes_Kitchens" Association="P_Lebedeva_DiplomModel.FK_Recipes_Kitchens">
+      <End Role="Kitchens" EntitySet="Kitchens" />
+      <End Role="Recipes" EntitySet="Recipes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recipes_Meals" Association="P_Lebedeva_DiplomModel.FK_Recipes_Meals">
+      <End Role="Meals" EntitySet="Meals" />
+      <End Role="Recipes" EntitySet="Recipes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recipes_Preparations" Association="P_Lebedeva_DiplomModel.FK_Recipes_Preparations">
+      <End Role="Preparations" EntitySet="Preparations" />
+      <End Role="Recipes" EntitySet="Recipes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recipes_RecipeTypes" Association="P_Lebedeva_DiplomModel.FK_Recipes_RecipeTypes">
+      <End Role="RecipeTypes" EntitySet="RecipeTypes" />
+      <End Role="Recipes" EntitySet="Recipes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Recipes_Specifics" Association="P_Lebedeva_DiplomModel.FK_Recipes_Specifics">
+      <End Role="Specifics" EntitySet="Specifics" />
+      <End Role="Recipes" EntitySet="Recipes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Steps_Recipes" Association="P_Lebedeva_DiplomModel.FK_Steps_Recipes">
+      <End Role="Recipes" EntitySet="Recipes" />
+      <End Role="Steps" EntitySet="Steps" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Activities">
+    <Key>
+      <PropertyRef Name="ActivityId" />
+    </Key>
+    <Property Name="ActivityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Coefficient" Type="Double" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="P_Lebedeva_DiplomModel.FK_Users_Activities" FromRole="Activities" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="DailyRation">
+    <Key>
+      <PropertyRef Name="DailyRationId" />
+    </Key>
+    <Property Name="DailyRationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="RecepeId" Type="Int32" Nullable="false" />
+    <Property Name="Date" Type="DateTime" Nullable="false" Precision="3" />
+    <NavigationProperty Name="Recipes" Relationship="P_Lebedeva_DiplomModel.FK_DailyRation_Recipes" FromRole="DailyRation" ToRole="Recipes" />
+    <NavigationProperty Name="Users" Relationship="P_Lebedeva_DiplomModel.FK_DailyRation_Users" FromRole="DailyRation" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Diets">
+    <Key>
+      <PropertyRef Name="DietId" />
+    </Key>
+    <Property Name="DietId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Recipes" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Diets" FromRole="Diets" ToRole="Recipes" />
+  </EntityType>
+  <EntityType Name="Difficulties">
+    <Key>
+      <PropertyRef Name="DifficultiesId" />
+    </Key>
+    <Property Name="DifficultiesId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Recipes" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Difficulties" FromRole="Difficulties" ToRole="Recipes" />
+  </EntityType>
+  <EntityType Name="Genders">
+    <Key>
+      <PropertyRef Name="GenderId" />
+    </Key>
+    <Property Name="GenderId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="P_Lebedeva_DiplomModel.FK_Users_Users" FromRole="Genders" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="Goals">
+    <Key>
+      <PropertyRef Name="GoalId" />
+    </Key>
+    <Property Name="GoalId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Users" Relationship="P_Lebedeva_DiplomModel.FK_Users_Goals" FromRole="Goals" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="IngredientForRecipe">
+    <Key>
+      <PropertyRef Name="IngredientForRecipeId" />
+    </Key>
+    <Property Name="IngredientForRecipeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IngredientId" Type="Int32" Nullable="false" />
+    <Property Name="RecipeId" Type="Int32" Nullable="false" />
+    <Property Name="UnitsOfMeasurementId" Type="Int32" />
+    <NavigationProperty Name="Ingredients" Relationship="P_Lebedeva_DiplomModel.FK_IngredientForRecipe_Ingredients" FromRole="IngredientForRecipe" ToRole="Ingredients" />
+    <NavigationProperty Name="Recipes" Relationship="P_Lebedeva_DiplomModel.FK_IngredientForRecipe_Recipes" FromRole="IngredientForRecipe" ToRole="Recipes" />
+    <NavigationProperty Name="UnitsOfMeasurement" Relationship="P_Lebedeva_DiplomModel.FK_IngredientForRecipe_UnitsOfMeasurement" FromRole="IngredientForRecipe" ToRole="UnitsOfMeasurement" />
+  </EntityType>
+  <EntityType Name="Ingredients">
+    <Key>
+      <PropertyRef Name="IngredientId" />
+    </Key>
+    <Property Name="IngredientId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="IngredientForRecipe" Relationship="P_Lebedeva_DiplomModel.FK_IngredientForRecipe_Ingredients" FromRole="Ingredients" ToRole="IngredientForRecipe" />
+  </EntityType>
+  <EntityType Name="Kitchens">
+    <Key>
+      <PropertyRef Name="KitchenId" />
+    </Key>
+    <Property Name="KitchenId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Recipes" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Kitchens" FromRole="Kitchens" ToRole="Recipes" />
+  </EntityType>
+  <EntityType Name="Meals">
+    <Key>
+      <PropertyRef Name="MealId" />
+    </Key>
+    <Property Name="MealId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Recipes" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Meals" FromRole="Meals" ToRole="Recipes" />
+  </EntityType>
+  <EntityType Name="Preparations">
+    <Key>
+      <PropertyRef Name="PreparationId" />
+    </Key>
+    <Property Name="PreparationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Recipes" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Preparations" FromRole="Preparations" ToRole="Recipes" />
+  </EntityType>
+  <EntityType Name="Recipes">
+    <Key>
+      <PropertyRef Name="RecipeId" />
+    </Key>
+    <Property Name="RecipeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MinutesOfCooking" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Comment" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="MealId" Type="Int32" />
+    <Property Name="RecipeType" Type="Int32" />
+    <Property Name="DietId" Type="Int32" />
+    <Property Name="SpecificsId" Type="Int32" />
+    <Property Name="DifficultyId" Type="Int32" />
+    <Property Name="CookingId" Type="Int32" />
+    <Property Name="KitchenId" Type="Int32" />
+    <NavigationProperty Name="DailyRation" Relationship="P_Lebedeva_DiplomModel.FK_DailyRation_Recipes" FromRole="Recipes" ToRole="DailyRation" />
+    <NavigationProperty Name="Diets" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Diets" FromRole="Recipes" ToRole="Diets" />
+    <NavigationProperty Name="Difficulties" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Difficulties" FromRole="Recipes" ToRole="Difficulties" />
+    <NavigationProperty Name="IngredientForRecipe" Relationship="P_Lebedeva_DiplomModel.FK_IngredientForRecipe_Recipes" FromRole="Recipes" ToRole="IngredientForRecipe" />
+    <NavigationProperty Name="Kitchens" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Kitchens" FromRole="Recipes" ToRole="Kitchens" />
+    <NavigationProperty Name="Meals" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Meals" FromRole="Recipes" ToRole="Meals" />
+    <NavigationProperty Name="Preparations" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Preparations" FromRole="Recipes" ToRole="Preparations" />
+    <NavigationProperty Name="RecipeTypes" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_RecipeTypes" FromRole="Recipes" ToRole="RecipeTypes" />
+    <NavigationProperty Name="Specifics" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Specifics" FromRole="Recipes" ToRole="Specifics" />
+    <NavigationProperty Name="Steps" Relationship="P_Lebedeva_DiplomModel.FK_Steps_Recipes" FromRole="Recipes" ToRole="Steps" />
+  </EntityType>
+  <EntityType Name="RecipeTypes">
+    <Key>
+      <PropertyRef Name="RecipeTypeId" />
+    </Key>
+    <Property Name="RecipeTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Recipes" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_RecipeTypes" FromRole="RecipeTypes" ToRole="Recipes" />
+  </EntityType>
+  <EntityType Name="Specifics">
+    <Key>
+      <PropertyRef Name="SpecificityId" />
+    </Key>
+    <Property Name="SpecificityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Recipes" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Specifics" FromRole="Specifics" ToRole="Recipes" />
+  </EntityType>
+  <EntityType Name="Steps">
+    <Key>
+      <PropertyRef Name="StepId" />
+    </Key>
+    <Property Name="StepId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RecipeId" Type="Int32" Nullable="false" />
+    <Property Name="StepNomen" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Photo" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Recipes" Relationship="P_Lebedeva_DiplomModel.FK_Steps_Recipes" FromRole="Steps" ToRole="Recipes" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="UnitsOfMeasurement">
+    <Key>
+      <PropertyRef Name="UnitsOfMeasurementId" />
+    </Key>
+    <Property Name="UnitsOfMeasurementId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="IngredientForRecipe" Relationship="P_Lebedeva_DiplomModel.FK_IngredientForRecipe_UnitsOfMeasurement" FromRole="UnitsOfMeasurement" ToRole="IngredientForRecipe" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="GenderId" Type="Int32" />
+    <Property Name="Login" Type="String" Nullable="false" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Weight" Type="Double" />
+    <Property Name="Height" Type="Double" />
+    <Property Name="ActivityId" Type="Int32" />
+    <Property Name="GoalId" Type="Int32" />
+    <Property Name="Calories" Type="Int32" />
+    <Property Name="Squirrels" Type="Double" />
+    <Property Name="DateOfBirth" Type="Int32" />
+    <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Fats" Type="Double" />
+    <Property Name="Carbohydrates" Type="Double" />
+    <NavigationProperty Name="Activities" Relationship="P_Lebedeva_DiplomModel.FK_Users_Activities" FromRole="Users" ToRole="Activities" />
+    <NavigationProperty Name="DailyRation" Relationship="P_Lebedeva_DiplomModel.FK_DailyRation_Users" FromRole="Users" ToRole="DailyRation" />
+    <NavigationProperty Name="Genders" Relationship="P_Lebedeva_DiplomModel.FK_Users_Users" FromRole="Users" ToRole="Genders" />
+    <NavigationProperty Name="Goals" Relationship="P_Lebedeva_DiplomModel.FK_Users_Goals" FromRole="Users" ToRole="Goals" />
+  </EntityType>
+  <Association Name="FK_Users_Activities">
+    <End Type="P_Lebedeva_DiplomModel.Activities" Role="Activities" Multiplicity="0..1" />
+    <End Type="P_Lebedeva_DiplomModel.Users" Role="Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Activities">
+        <PropertyRef Name="ActivityId" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="ActivityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DailyRation_Recipes">
+    <End Type="P_Lebedeva_DiplomModel.Recipes" Role="Recipes" Multiplicity="1" />
+    <End Type="P_Lebedeva_DiplomModel.DailyRation" Role="DailyRation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recipes">
+        <PropertyRef Name="RecipeId" />
+      </Principal>
+      <Dependent Role="DailyRation">
+        <PropertyRef Name="RecepeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DailyRation_Users">
+    <End Type="P_Lebedeva_DiplomModel.Users" Role="Users" Multiplicity="1" />
+    <End Type="P_Lebedeva_DiplomModel.DailyRation" Role="DailyRation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="DailyRation">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recipes_Diets">
+    <End Type="P_Lebedeva_DiplomModel.Diets" Role="Diets" Multiplicity="0..1" />
+    <End Type="P_Lebedeva_DiplomModel.Recipes" Role="Recipes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Diets">
+        <PropertyRef Name="DietId" />
+      </Principal>
+      <Dependent Role="Recipes">
+        <PropertyRef Name="DietId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recipes_Difficulties">
+    <End Type="P_Lebedeva_DiplomModel.Difficulties" Role="Difficulties" Multiplicity="0..1" />
+    <End Type="P_Lebedeva_DiplomModel.Recipes" Role="Recipes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Difficulties">
+        <PropertyRef Name="DifficultiesId" />
+      </Principal>
+      <Dependent Role="Recipes">
+        <PropertyRef Name="DifficultyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Users">
+    <End Type="P_Lebedeva_DiplomModel.Genders" Role="Genders" Multiplicity="0..1" />
+    <End Type="P_Lebedeva_DiplomModel.Users" Role="Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Genders">
+        <PropertyRef Name="GenderId" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="GenderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Goals">
+    <End Type="P_Lebedeva_DiplomModel.Goals" Role="Goals" Multiplicity="0..1" />
+    <End Type="P_Lebedeva_DiplomModel.Users" Role="Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Goals">
+        <PropertyRef Name="GoalId" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="GoalId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IngredientForRecipe_Ingredients">
+    <End Type="P_Lebedeva_DiplomModel.Ingredients" Role="Ingredients" Multiplicity="1" />
+    <End Type="P_Lebedeva_DiplomModel.IngredientForRecipe" Role="IngredientForRecipe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ingredients">
+        <PropertyRef Name="IngredientId" />
+      </Principal>
+      <Dependent Role="IngredientForRecipe">
+        <PropertyRef Name="IngredientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IngredientForRecipe_Recipes">
+    <End Type="P_Lebedeva_DiplomModel.Recipes" Role="Recipes" Multiplicity="1" />
+    <End Type="P_Lebedeva_DiplomModel.IngredientForRecipe" Role="IngredientForRecipe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recipes">
+        <PropertyRef Name="RecipeId" />
+      </Principal>
+      <Dependent Role="IngredientForRecipe">
+        <PropertyRef Name="RecipeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IngredientForRecipe_UnitsOfMeasurement">
+    <End Type="P_Lebedeva_DiplomModel.UnitsOfMeasurement" Role="UnitsOfMeasurement" Multiplicity="0..1" />
+    <End Type="P_Lebedeva_DiplomModel.IngredientForRecipe" Role="IngredientForRecipe" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="UnitsOfMeasurement">
+        <PropertyRef Name="UnitsOfMeasurementId" />
+      </Principal>
+      <Dependent Role="IngredientForRecipe">
+        <PropertyRef Name="UnitsOfMeasurementId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recipes_Kitchens">
+    <End Type="P_Lebedeva_DiplomModel.Kitchens" Role="Kitchens" Multiplicity="0..1" />
+    <End Type="P_Lebedeva_DiplomModel.Recipes" Role="Recipes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kitchens">
+        <PropertyRef Name="KitchenId" />
+      </Principal>
+      <Dependent Role="Recipes">
+        <PropertyRef Name="KitchenId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recipes_Meals">
+    <End Type="P_Lebedeva_DiplomModel.Meals" Role="Meals" Multiplicity="0..1" />
+    <End Type="P_Lebedeva_DiplomModel.Recipes" Role="Recipes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Meals">
+        <PropertyRef Name="MealId" />
+      </Principal>
+      <Dependent Role="Recipes">
+        <PropertyRef Name="MealId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recipes_Preparations">
+    <End Type="P_Lebedeva_DiplomModel.Preparations" Role="Preparations" Multiplicity="0..1" />
+    <End Type="P_Lebedeva_DiplomModel.Recipes" Role="Recipes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Preparations">
+        <PropertyRef Name="PreparationId" />
+      </Principal>
+      <Dependent Role="Recipes">
+        <PropertyRef Name="CookingId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recipes_RecipeTypes">
+    <End Type="P_Lebedeva_DiplomModel.RecipeTypes" Role="RecipeTypes" Multiplicity="0..1" />
+    <End Type="P_Lebedeva_DiplomModel.Recipes" Role="Recipes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RecipeTypes">
+        <PropertyRef Name="RecipeTypeId" />
+      </Principal>
+      <Dependent Role="Recipes">
+        <PropertyRef Name="RecipeType" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Recipes_Specifics">
+    <End Type="P_Lebedeva_DiplomModel.Specifics" Role="Specifics" Multiplicity="0..1" />
+    <End Type="P_Lebedeva_DiplomModel.Recipes" Role="Recipes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Specifics">
+        <PropertyRef Name="SpecificityId" />
+      </Principal>
+      <Dependent Role="Recipes">
+        <PropertyRef Name="SpecificsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Steps_Recipes">
+    <End Type="P_Lebedeva_DiplomModel.Recipes" Role="Recipes" Multiplicity="1" />
+    <End Type="P_Lebedeva_DiplomModel.Steps" Role="Steps" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Recipes">
+        <PropertyRef Name="RecipeId" />
+      </Principal>
+      <Dependent Role="Steps">
+        <PropertyRef Name="RecipeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
