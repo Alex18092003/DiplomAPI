@@ -22,6 +22,7 @@ namespace DiplomAPI.Models
             DifficultyId = Convert.ToInt32(recipes.DifficultyId);
             CookingId = Convert.ToInt32(recipes.CookingId);
             KitchenId = Convert.ToInt32(recipes.KitchenId);
+            Calories = Convert.ToInt32(recipes.Calories);
         }
         public int RecipeId { get; set; }
         public string Title { get; set; }
@@ -36,6 +37,7 @@ namespace DiplomAPI.Models
         public int DifficultyId { get; set; }
         public int CookingId { get; set; }
         public int KitchenId { get; set; }
+        public int Calories { get; set; }
 
     }
 }

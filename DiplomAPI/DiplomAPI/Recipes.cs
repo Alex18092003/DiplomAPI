@@ -35,6 +35,7 @@ namespace DiplomAPI
         public Nullable<int> DifficultyId { get; set; }
         public Nullable<int> CookingId { get; set; }
         public Nullable<int> KitchenId { get; set; }
+        public Nullable<int> Calories { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DailyRation> DailyRation { get; set; }

@@ -104,6 +104,7 @@
           <Property Name="DifficultyId" Type="int" />
           <Property Name="CookingId" Type="int" />
           <Property Name="KitchenId" Type="int" />
+          <Property Name="Calories" Type="int" />
         </EntityType>
         <EntityType Name="RecipeTypes">
           <Key>
@@ -641,6 +642,7 @@
           <Property Name="DifficultyId" Type="Int32" />
           <Property Name="CookingId" Type="Int32" />
           <Property Name="KitchenId" Type="Int32" />
+          <Property Name="Calories" Type="Int32" />
           <NavigationProperty Name="DailyRation" Relationship="P_Lebedeva_DiplomModel.FK_DailyRation_Recipes" FromRole="Recipes" ToRole="DailyRation" />
           <NavigationProperty Name="Diets" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Diets" FromRole="Recipes" ToRole="Diets" />
           <NavigationProperty Name="Difficulties" Relationship="P_Lebedeva_DiplomModel.FK_Recipes_Difficulties" FromRole="Recipes" ToRole="Difficulties" />
@@ -1013,6 +1015,7 @@
           <EntitySetMapping Name="Recipes">
             <EntityTypeMapping TypeName="P_Lebedeva_DiplomModel.Recipes">
               <MappingFragment StoreEntitySet="Recipes">
+                <ScalarProperty Name="Calories" ColumnName="Calories" />
                 <ScalarProperty Name="KitchenId" ColumnName="KitchenId" />
                 <ScalarProperty Name="CookingId" ColumnName="CookingId" />
                 <ScalarProperty Name="DifficultyId" ColumnName="DifficultyId" />
